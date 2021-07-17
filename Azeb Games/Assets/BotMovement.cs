@@ -8,24 +8,22 @@ public class BotMovement : MonoBehaviour
 
     public float runSpeed = 150f;
 
-    float horizontalMove = 60f;
+    public bool direction;
 
-    bool jump = false;
+    float horizontalMove = 60f;
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
+    	if (direction) {
+    		horizontalMove = runSpeed;
+    	} else {
+    		horizontalMove = -runSpeed;
+    	}
     }
 
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
     }
 }
