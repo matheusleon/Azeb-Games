@@ -20,9 +20,8 @@ public class MeleeAttack : MonoBehaviour
         		for (int i = 0; i < enemiesToDamage.Length; i++) {
         			enemiesToDamage[i].GetComponent<BotMovement>().TakeDamage(damage);
         		}
-        	}
-
-        	timeLeftToAttack = attackDelay;
+        	    timeLeftToAttack = attackDelay;
+            }
         } else {
         	timeLeftToAttack -= Time.deltaTime;
         }
