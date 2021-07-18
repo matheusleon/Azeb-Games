@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211068629488867536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CeilingCheck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 8211068629919994972}
   - component: {fileID: 8211068629919994975}
   - component: {fileID: 8211068629919994974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BotRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +161,7 @@ MonoBehaviour:
   controller: {fileID: 8211068629919994973}
   runSpeed: 40
   direction: 0
+  health: 50
 --- !u!61 &8211068629919994975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -217,7 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211068631104208192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
