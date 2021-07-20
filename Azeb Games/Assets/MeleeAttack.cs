@@ -17,7 +17,8 @@ public class MeleeAttack : MonoBehaviour
         if (timeLeftToAttack <= 0) {
         	if (Input.GetKey(KeyCode.E)) {
         		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
-        		for (int i = 0; i < enemiesToDamage.Length; i++) {
+        		Debug.Log($"Found {enemiesToDamage.Length} enemies to damage.");
+						for (int i = 0; i < enemiesToDamage.Length; i++) {
         			enemiesToDamage[i].GetComponent<HasHealth>().TakeDamage(damage);
         		}
         	    timeLeftToAttack = attackDelay;
