@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BotMovement : MonoBehaviour
+public class Bot : HasHealth
 {
     public CharacterController2D controller;
 
@@ -10,17 +10,11 @@ public class BotMovement : MonoBehaviour
 
     public bool direction;
 
-    public float health;
-
     float horizontalMove = 60f;
 
     // Update is called once per frame
     void Update()
-    {
-    	if (health <= 0) {
-    		Destroy(gameObject);
-    	}
-    	
+    {    	
     	if (direction) {
     		horizontalMove = runSpeed;
     	} else {
@@ -31,10 +25,5 @@ public class BotMovement : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
-    }
-
-    public void TakeDamage(int damage) {
-    	health -= damage;
-    	Debug.Log("damage taken");
     }
 }
