@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6359581404888257257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181434572528466552}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &181434572528466552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359581404888257257}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5039997, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8211068629919994947}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8211068629488867539
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211068629488867536}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CeilingCheck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +75,8 @@ GameObject:
   - component: {fileID: 8211068629919994975}
   - component: {fileID: 8211068629919994974}
   - component: {fileID: -3574800279647172649}
-  m_Layer: 6
+  - component: {fileID: 4907940150432726336}
+  m_Layer: 7
   m_Name: BotRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,6 +96,7 @@ Transform:
   m_Children:
   - {fileID: 8211068629488867536}
   - {fileID: 8211068631104208192}
+  - {fileID: 181434572528466552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -159,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb26c5b3ca97c942b800ee561d7c637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
   controller: {fileID: 8211068629919994973}
   runSpeed: 40
   direction: 0
@@ -223,6 +254,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+--- !u!114 &4907940150432726336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211068629919994969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e069c9599b792b44b8451206ba98a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0.5
+  alwaysAttacking: 1
+  attackPos: {fileID: 181434572528466552}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 1344
+  finalAttackLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  attackRange: 0.8
+  damage: 10
 --- !u!1 &8211068631104208195
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211068631104208192}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: GroundCheck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

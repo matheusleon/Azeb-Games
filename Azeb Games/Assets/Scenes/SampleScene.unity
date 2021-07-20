@@ -611,7 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 304189336}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 509106497}
   - component: {fileID: 509106499}
   - component: {fileID: 509106500}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: HealthyCastle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,7 +2102,7 @@ GameObject:
   - component: {fileID: 649744151}
   - component: {fileID: 649744153}
   - component: {fileID: 649744154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,10 +2279,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: 0.1
+  alwaysAttacking: 0
   attackPos: {fileID: 1463880260}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 2688
+  finalAttackLayer:
+    serializedVersion: 2
+    m_Bits: 0
   attackRange: 0.93
   damage: 25
 --- !u!114 &649744154
@@ -2742,7 +2746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 827108753}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2860,7 +2864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bot: {fileID: 8211068629919994969, guid: e18fad8e45e51304f93cd3897570b70e, type: 3}
   spawnTime: 5
-  spawnDelay: 5
+  spawnDelay: 10
 --- !u!4 &993405909
 Transform:
   m_ObjectHideFlags: 0
@@ -2869,7 +2873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993405907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.5, y: -13.3, z: -1.5407943}
+  m_LocalPosition: {x: 34.8, y: -13.5, z: -1.5407943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2900,7 +2904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077566797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.9, y: -13.5, z: -1.5407943}
+  m_LocalPosition: {x: -12.8, y: -13.3, z: -1.5407943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2934,7 +2938,7 @@ GameObject:
   - component: {fileID: 1172248456}
   - component: {fileID: 1172248459}
   - component: {fileID: 1172248458}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: DestroyedCastle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3954,7 +3958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330211525}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Castle Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3986,7 +3990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463880260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4020,7 +4024,7 @@ GameObject:
   - component: {fileID: 1483756309}
   - component: {fileID: 1483756308}
   - component: {fileID: 1483756307}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: HealthyCastle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,7 +5160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1840674398}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Castle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10288,7 +10292,7 @@ GameObject:
   - component: {fileID: 2022608388}
   - component: {fileID: 2022608387}
   - component: {fileID: 2022608386}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: DestroyedCastle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
