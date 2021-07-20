@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8211068629919994972}
   - component: {fileID: 8211068629919994975}
   - component: {fileID: 8211068629919994974}
+  - component: {fileID: -3574800279647172649}
   m_Layer: 6
   m_Name: BotRight
   m_TagString: Untagged
@@ -158,10 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb26c5b3ca97c942b800ee561d7c637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
   controller: {fileID: 8211068629919994973}
   runSpeed: 40
   direction: 0
-  health: 50
 --- !u!61 &8211068629919994975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,6 +210,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3574800279647172649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211068629919994969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c8cad1c1f9d48cca94087e38c4adde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!1 &8211068631104208195
 GameObject:
   m_ObjectHideFlags: 0
