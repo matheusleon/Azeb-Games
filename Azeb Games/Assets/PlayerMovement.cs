@@ -6,13 +6,14 @@ using Newtonsoft.Json.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     public CharacterController2D controller;
 
     public float runSpeed = 80f;
-
     float horizontalMove = 0f;
 
     bool jump = false;
+    bool crouch = false;
 
     void Awake() 
     {
@@ -29,11 +30,32 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("IsJumping", true);
+        }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        } else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
         }
     }
+
+    public void onLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+
+    public void OnCrouching(bool isCrouching)
+	{
+		animator.SetBool("IsCrouching", isCrouching);
+	}
 
     void FixedUpdate()
     {
