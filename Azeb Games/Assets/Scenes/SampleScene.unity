@@ -5257,8 +5257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37d83ebce05ad74683fd3228dde9e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  browserStartMode: 0
-  controllerHtml: {fileID: 102900000, guid: 3eef9e533ff6b6d4b9cc245f4825a99d, type: 3}
+  browserStartMode: 1
+  controllerHtml: {fileID: 102900000, guid: 2f63e479e7cc17047b7cf5a762d28ed7, type: 3}
   autoScaleCanvas: 1
   devGameId: 
 --- !u!4 &1872324655
