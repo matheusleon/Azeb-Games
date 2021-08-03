@@ -10379,7 +10379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
-  triggersGameOver: 0
+  triggersGameOver: 1
   team: 0
 --- !u!61 &2022608387
 BoxCollider2D:
