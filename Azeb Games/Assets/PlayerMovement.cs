@@ -55,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
         } 
         else if (element == "jump")
         {
-            isJumping = Convert.ToInt32(data2["pressed"].ToString() == "True");
+            Debug.Log("Entrou no pular, é isso" + (int)data2["pressed"]);
+            isJumping = (int)data2["pressed"];
         }
 
         Debug.Log("isMovingRight = " + isMovingRight);
@@ -95,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump); 
+        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump); 
         jump = false;
     }
 
