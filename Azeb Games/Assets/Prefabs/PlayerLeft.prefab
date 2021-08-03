@@ -273,7 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   triggersGameOver: 0
-  canRevive: 0
   team: 0
 --- !u!95 &6323334341640899363
 Animator:

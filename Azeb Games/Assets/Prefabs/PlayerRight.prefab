@@ -253,7 +253,7 @@ MonoBehaviour:
   attackPos: {fileID: 6889954625581561196}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 2688
+    m_Bits: 1344
   finalAttackLayer:
     serializedVersion: 2
     m_Bits: 0
