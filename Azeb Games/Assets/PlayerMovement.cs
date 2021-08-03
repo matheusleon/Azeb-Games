@@ -58,8 +58,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Entrou no pular, é isso" + (int)data2["pressed"]);
             isJumping = (int)data2["pressed"];
         }
-
-        Debug.Log("isMovingRight = " + isMovingRight);
     }
 
     // Update is called once per frame
