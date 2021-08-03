@@ -1542,6 +1542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  triggersGameOver: 0
+  team: 0
 --- !u!61 &509106500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2328,6 +2330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  triggersGameOver: 0
+  team: 0
 --- !u!95 &649744155
 Animator:
   serializedVersion: 3
@@ -3823,6 +3827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  triggersGameOver: 1
+  team: 1
 --- !u!61 &1172248459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4129,6 +4135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  triggersGameOver: 0
+  team: 0
 --- !u!483693784 &1483756309
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -10371,6 +10379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  triggersGameOver: 0
+  team: 0
 --- !u!61 &2022608387
 BoxCollider2D:
   m_ObjectHideFlags: 0
