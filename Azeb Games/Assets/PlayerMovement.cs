@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    int isMovingRight = 0;
+    int isMovingLeft = 0;
+    int isJumping = 0;
+    int isCrouching = 0;
+
     void Start() 
     {
         AirConsole.instance.onMessage += onMessage;
@@ -23,25 +29,55 @@ public class PlayerMovement : MonoBehaviour
     void onMessage(int fromDevice, JToken data)
     {
         Debug.Log("message from " + fromDevice + ", data: " + data);
+
+        JObject data2 = data.Value<JObject>("data");
+
+        string element = data.Value<string>("element");
+
+        if (element == "dpad")
+        {
+            if (data2["key"] != null && data2["key"].ToString() == "right")
+            {
+                isMovingRight = (int)data2["pressed"];
+            }
+            if (data2["key"] != null && data2["key"].ToString() == "left")
+            {
+                isMovingLeft = (int)data2["pressed"];
+            }
+            if (data2["key"] != null && data2["key"].ToString() == "up")
+            {
+                isJumping = (int)data2["pressed"];
+            }
+            if (data2["key"] != null && data2["key"].ToString() == "down")
+            {
+                isCrouching = (int)data2["pressed"];
+            }
+        } 
+        else if (element == "jump")
+        {
+            isJumping = Convert.ToInt32(data2["pressed"].ToString() == "True");
+        }
+
+        Debug.Log("isMovingRight = " + isMovingRight);
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = (isMovingRight - isMovingLeft) * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
+        if (isJumping == 1 && !jump)
         {
             jump = true;
             animator.SetBool("IsJumping", true);
         }
 
-        if (Input.GetButtonDown("Crouch"))
+        if (isCrouching == 1)
         {
             crouch = true;
-        } else if (Input.GetButtonUp("Crouch"))
+        } else if (isCrouching == 0)
         {
             crouch = false;
         }
