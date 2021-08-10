@@ -3280,7 +3280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b079449dd7a314cb61163fe768ca2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6323334341640899370, guid: 41c808b0784fdc742a60c576509546fa, type: 3}
+  player: {fileID: 8384786014764517331, guid: 41c808b0784fdc742a60c576509546fa, type: 3}
   spawnDelay: 2
   id: -10
 --- !u!4 &382026011
@@ -4769,7 +4769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b079449dd7a314cb61163fe768ca2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6889954625871573050, guid: 9db573a1a29bf8c4e8498502f4956f49, type: 3}
+  player: {fileID: 1148391087346553537, guid: 9db573a1a29bf8c4e8498502f4956f49, type: 3}
   spawnDelay: 2
   id: -10
 --- !u!4 &1263622091

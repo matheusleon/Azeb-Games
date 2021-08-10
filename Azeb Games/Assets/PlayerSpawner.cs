@@ -31,9 +31,7 @@ public class PlayerSpawner : MonoBehaviour
         {
 			player_instance.GetComponent<PlayerMovement>().id = this.id;
 			player_instance.GetComponent<MeleeAttack>().id = this.id;
-
-			Debug.Log("Setando player = " + playerName);
-			Debug.Log(player_instance.GetComponent<PlayerMovement>().id + " O QUE = " + this.id);
+			player_instance.GetComponent<Weapon>().id = this.id;
 		}
 
 	}
