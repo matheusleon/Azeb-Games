@@ -15,6 +15,7 @@ public class MeleeAttack : MonoBehaviour
 	public float attackRange;
 	public int damage;
 	public int isAttacking;
+	public int id;
 
 	void Start()
 	{
@@ -36,9 +37,14 @@ public class MeleeAttack : MonoBehaviour
 
     void onMessage(int fromDevice, JToken data)
     {
-        Debug.Log("message from " + fromDevice + ", data: " + data);
+        Debug.Log("message from attack " + fromDevice + ", data: " + data);
 
-        JObject data2 = data.Value<JObject>("data");
+		if (fromDevice != this.id)
+		{
+			return;
+		}
+
+		JObject data2 = data.Value<JObject>("data");
 
         string element = data.Value<string>("element");
 

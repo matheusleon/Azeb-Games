@@ -772,7 +772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 6323334341640899370, guid: 41c808b0784fdc742a60c576509546fa, type: 3}
   spawnDelay: 2
-  id: 1
+  id: -10
 --- !u!4 &382026011
 Transform:
   m_ObjectHideFlags: 0
@@ -3691,7 +3691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 6889954625871573050, guid: 9db573a1a29bf8c4e8498502f4956f49, type: 3}
   spawnDelay: 2
-  id: 0
+  id: -10
 --- !u!4 &1263622091
 Transform:
   m_ObjectHideFlags: 0
@@ -5054,6 +5054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2204435468aa64134af4022ecf22cbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id_left: -1
+  id_right: -1
 --- !u!4 &1804627051
 Transform:
   m_ObjectHideFlags: 0

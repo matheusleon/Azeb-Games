@@ -236,6 +236,7 @@ MonoBehaviour:
   animator: {fileID: 6323334341640899363}
   controller: {fileID: 6323334341640899360}
   runSpeed: 60
+  id: -10
 --- !u!114 &6323334341640899361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +260,7 @@ MonoBehaviour:
     m_Bits: 0
   attackRange: 0.93
   damage: 25
+  isAttacking: 0
 --- !u!114 &6323334341640899362
 MonoBehaviour:
   m_ObjectHideFlags: 0

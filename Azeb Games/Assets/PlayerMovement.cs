@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     int isMovingLeft = 0;
     int isJumping = 0;
     int isCrouching = 0;
-    public int id;
+    public int id = -10;
 
     void Start() 
     {
