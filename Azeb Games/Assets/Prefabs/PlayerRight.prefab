@@ -234,6 +234,7 @@ MonoBehaviour:
   damage: 25
   isAttacking: 0
   id: 0
+  animator: {fileID: 0}
 --- !u!114 &2127058524786093628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +250,7 @@ MonoBehaviour:
   health: 100
   triggersGameOver: 0
   team: 0
+  animator: {fileID: 5726764271444080192}
 --- !u!95 &5726764271444080192
 Animator:
   serializedVersion: 3
