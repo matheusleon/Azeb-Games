@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     int isMovingLeft = 0;
     int isJumping = 0;
     int isCrouching = 0;
+    public int id;
 
     void Start() 
     {
@@ -28,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     void onMessage(int fromDevice, JToken data)
     {
+        Debug.Log("message from " + fromDevice + ", my id " + this.id);
+
+        if (fromDevice != this.id) {
+            return;
+        }
+
         Debug.Log("message from " + fromDevice + ", data: " + data);
 
         JObject data2 = data.Value<JObject>("data");
@@ -55,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         } 
         else if (element == "jump")
         {
-            Debug.Log("Entrou no pular, é isso" + (int)data2["pressed"]);
+            Debug.Log("Entrou no pular, ï¿½ isso" + (int)data2["pressed"]);
             isJumping = (int)data2["pressed"];
         }
     }
