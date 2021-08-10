@@ -29,11 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
     void onMessage(int fromDevice, JToken data)
     {
-        Debug.Log("message from " + fromDevice + ", my id " + this.id);
 
         if (fromDevice != this.id) {
             return;
         }
+
+        Debug.Log("message from " + fromDevice + ", my id " + this.id);
 
         Debug.Log("message from " + fromDevice + ", data: " + data);
 
