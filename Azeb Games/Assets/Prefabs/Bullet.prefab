@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1174376762775159119}
   - component: {fileID: 4105187207325633925}
   - component: {fileID: 5773494412952984249}
+  - component: {fileID: 7453747688470247562}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a20198c1d31ac7429f4df5e0e6e0d86, type: 3}
+  m_Sprite: {fileID: -3770396098057330730, guid: d1993c314a46e11479ac8fdcc346aa8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02146244, y: 0}
   serializedVersion: 2
-  m_Radius: 1.285
+  m_Radius: 0.61108017
 --- !u!114 &5773494412952984249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +141,22 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
+--- !u!95 &7453747688470247562
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7182791972099771083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 884a0dbf99bfdd946a73407e62d8a411, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
