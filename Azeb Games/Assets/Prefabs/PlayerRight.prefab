@@ -252,6 +252,7 @@ MonoBehaviour:
   triggersGameOver: 0
   team: 0
   animator: {fileID: 5726764271444080192}
+  animateDeath: 1
 --- !u!95 &5726764271444080192
 Animator:
   serializedVersion: 3

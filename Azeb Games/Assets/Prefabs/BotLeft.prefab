@@ -144,6 +144,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 793359373439549963}
   m_CeilingCheck: {fileID: 793359375122658569}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -229,6 +230,7 @@ MonoBehaviour:
   triggersGameOver: 0
   team: 0
   animator: {fileID: 2932637523315804703}
+  animateDeath: 1
 --- !u!114 &8704874320867166741
 MonoBehaviour:
   m_ObjectHideFlags: 0
