@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1174376762775159119}
   - component: {fileID: 4105187207325633925}
   - component: {fileID: 5773494412952984249}
-  - component: {fileID: 7453747688470247562}
+  - component: {fileID: 2445573920739403975}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -141,7 +141,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
---- !u!95 &7453747688470247562
+--- !u!95 &2445573920739403975
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
