@@ -12,6 +12,8 @@ public class Bot : MonoBehaviour
 
     float horizontalMove = 60f;
 
+    public Animator animator;
+
     // Update is called once per frame
     void Update()
     {    	
@@ -20,6 +22,7 @@ public class Bot : MonoBehaviour
     	} else {
     		horizontalMove = -runSpeed;
     	}
+        animator.SetFloat("Moving", Mathf.Abs(horizontalMove));
     }
 
     void FixedUpdate()

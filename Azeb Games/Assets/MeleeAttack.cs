@@ -17,6 +17,8 @@ public class MeleeAttack : MonoBehaviour
 	public int isAttacking;
 	public int id;
 
+	public Animator animator;
+
 	void Start()
 	{
 		AirConsole.instance.onMessage += onMessage;
@@ -57,12 +59,13 @@ public class MeleeAttack : MonoBehaviour
     void PerformAttack(LayerMask attackLayer) {
 		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, attackLayer);
 		if (enemiesToDamage.Length > 0) {
-			DoDamage(enemiesToDamage, damage);
+			DoDamage(enemiesToDamage);
 			timeLeftToAttack = attackDelay;
 		}
+		animator.SetBool("Attacking", enemiesToDamage.Length > 0);
 	}
 
-    void DoDamage(Collider2D[] enemiesToDamage, int damage) {
+    void DoDamage(Collider2D[] enemiesToDamage) {
 		Debug.Log($"Damaging {enemiesToDamage.Length} enemies");
 		for (int i = 0; i < enemiesToDamage.Length; i++) {
 			enemiesToDamage[i].GetComponent<HasHealth>().TakeDamage(damage);
