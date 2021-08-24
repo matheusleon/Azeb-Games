@@ -17999,4 +17999,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChestClosed: {fileID: 31441633}
   ChestOpened: {fileID: 2109857972}
-  Bomb: {fileID: 0}
+  Bomb: {fileID: 2371405073881425651, guid: ac685dce058af5a4db55b0e16383b1d4, type: 3}
+  Weapon: {fileID: 6714035239212892842, guid: 908a0340d1f1bf34ca064b6aa3223272, type: 3}

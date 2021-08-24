@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
     void Start()
     {
     	float oneDirectionVelocity = (float) Math.Sqrt(1.0 / 2.0);
-        rb.velocity = new Vector2(oneDirectionVelocity, oneDirectionVelocity) * transform.right.x * speed;
+        rb.velocity = new Vector2(oneDirectionVelocity * transform.right.x, oneDirectionVelocity) * speed;
     }
 
     void Update()
