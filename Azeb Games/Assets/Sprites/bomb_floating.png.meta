@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 77a7ce905d8160a4d90b60a2aa81d605
+guid: 6bb9e1468e1d8a14083fb9cf6e29d5de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7550102363001739900
-    second: blue_bot_die_0
+      213: 1683342789153108896
+    second: bomb_floating_0
   - first:
-      213: 1096165902585978493
-    second: blue_bot_die_1
+      213: -8451036284971994248
+    second: bomb_floating_1
   - first:
-      213: 2930834158122746364
-    second: blue_bot_die_2
+      213: -82243521281453051
+    second: bomb_floating_2
   - first:
-      213: -9128255205485771517
-    second: blue_bot_die_3
-  - first:
-      213: 2655398588043811547
-    second: blue_bot_die_4
+      213: 6995453588782533104
+    second: bomb_floating_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,122 +99,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue_bot_die_0
+      name: bomb_floating_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 6
-        width: 17
-        height: 21
+        x: 6
+        y: 40
+        width: 19
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 485a17b27e5a83790800000000000000
-      internalID: -7550102363001739900
+      spriteID: 0a3bfa6195f6c5710800000000000000
+      internalID: 1683342789153108896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_bot_die_1
+      name: bomb_floating_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 6
-        width: 16
-        height: 21
+        x: 38
+        y: 36
+        width: 19
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e5886a41d563f00800000000000000
-      internalID: 1096165902585978493
+      spriteID: 873be4a3643e7ba80800000000000000
+      internalID: -8451036284971994248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_bot_die_2
+      name: bomb_floating_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 6
-        width: 17
-        height: 21
+        x: 6
+        y: 8
+        width: 19
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf1cc7a732a6ca820800000000000000
-      internalID: 2930834158122746364
+      spriteID: 50411f004ffcbdef0800000000000000
+      internalID: -82243521281453051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blue_bot_die_3
+      name: bomb_floating_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 6
-        width: 17
-        height: 21
+        x: 38
+        y: 5
+        width: 19
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30509e1114ce15180800000000000000
-      internalID: -9128255205485771517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_bot_die_4
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 4
-        width: 22
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdadc6962fed9d420800000000000000
-      internalID: 2655398588043811547
+      spriteID: 0f94d1ab9f7d41160800000000000000
+      internalID: 6995453588782533104
       vertices: []
       indices: 
       edges: []

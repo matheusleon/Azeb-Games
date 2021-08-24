@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     int isCrouching = 0;
     public int id = -10;
 
+    public int bombCount = 0;
+    public bool hasWeapon = false;
+
     void Start() 
     {
         AirConsole.instance.onMessage += onMessage;
@@ -110,6 +113,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if (AirConsole.instance != null){
             AirConsole.instance.onMessage -= onMessage;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Collectable"))
+        {
+            Destroy(collision.gameObject);
+            string item = collision.gameObject.GetComponent<CollectableScript>().itemType;
+            if (item == "Bomb")
+            {
+                Debug.Log("Pegou");
+                bombCount = bombCount + 1;
+                BombThrower bombThrower = GetComponent<BombThrower>();
+                bombThrower.addBomb();
+            } 
+            else if (item == "Weapon")
+            {
+                hasWeapon = true;
+            }
         }
     }
 }
