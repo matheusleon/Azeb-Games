@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChestOpener : MonoBehaviour
 {
     public GameObject ChestClosed, ChestOpened;
-
+    public GameObject Bomb;
 
     // Start is called before the first frame update
     void Start()
@@ -14,16 +14,12 @@ public class ChestOpener : MonoBehaviour
         ChestOpened.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         ChestClosed.SetActive(false);
         ChestOpened.SetActive(true);
+
+        Instantiate(Bomb, transform.position + new Vector3(0, 0 + 6, 0), Quaternion.identity);
     }
 
     void OnTriggerExit2D(Collider2D collision)
