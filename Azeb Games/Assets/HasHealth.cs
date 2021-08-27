@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class HasHealth : MonoBehaviour
 {
-    public float health;
+    public int health;
+    public HealthBar healthBar;
     public bool triggersGameOver = false;
+    public bool isBot = false;
     public Team team;
 
     public Animator animator;
@@ -16,6 +18,10 @@ public class HasHealth : MonoBehaviour
     public enum Team {
         Blue,
         Red
+    }
+
+    void Start() {
+        if (!isBot) healthBar.setMaxHealth(health);
     }
 
     public static bool HasParameter(string paramName, Animator animator)
@@ -32,6 +38,7 @@ public class HasHealth : MonoBehaviour
     // Start is called before the first frame update
     public void TakeDamage(int damage) {
     	health -= damage;
+        if (!isBot) healthBar.setHealth(health);
     	
         Debug.Log("damage taken, current health is " + health.ToString());
 
