@@ -2917,7 +2917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b7265fe58f64001a1aefb15b6127a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestCount: 0
   spawnTimeInSeconds: 30
   chest: {fileID: 1998825678943752227, guid: 437643297f05c4d4eb8846ef6c45f102, type: 3}
 --- !u!1 &611868009

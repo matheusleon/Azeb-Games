@@ -39,7 +39,7 @@ public class ChestOpener : MonoBehaviour
     }
 
     void OnDestroy() {
-        ChestSpawnerController chestController = Object.FindObjectOfType<ChestSpawnerController>();
-        chestController.chestCount -= 1;
+        ChestSpawnerController.chestCount -= 1;
+        Debug.Log("Chest count is : " + ChestSpawnerController.chestCount.ToString());
     }
 }

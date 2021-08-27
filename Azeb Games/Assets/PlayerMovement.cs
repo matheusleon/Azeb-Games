@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     public int id = -10;
 
     public int bombCount = 0;
-    public bool hasWeapon = false;
 
     void Start() 
     {
@@ -130,8 +129,9 @@ public class PlayerMovement : MonoBehaviour
                 bombThrower.addBomb();
             } 
             else if (item == "Weapon")
-            {
-                hasWeapon = true;
+            {           
+                gameObject.GetComponent<MeleeAttack>().enabled = false;
+                gameObject.GetComponent<Weapon>().enabled = true;
             }
         }
     }

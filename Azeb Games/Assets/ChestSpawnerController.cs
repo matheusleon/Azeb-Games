@@ -6,7 +6,7 @@ using System;
 public class ChestSpawnerController : MonoBehaviour
 {
     private DateTime lastChestSpawned = DateTime.Now;
-    public int chestCount = 0;
+    public static int chestCount = 0;
     public int spawnTimeInSeconds = 30;
     public GameObject chest;
 
