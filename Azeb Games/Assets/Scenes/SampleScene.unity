@@ -2917,7 +2917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b7265fe58f64001a1aefb15b6127a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTimeInSeconds: 30
+  spawnTimeInSeconds: 10
   chest: {fileID: 1998825678943752227, guid: 437643297f05c4d4eb8846ef6c45f102, type: 3}
 --- !u!1 &611868009
 GameObject:
@@ -17808,79 +17808,3 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &2128131699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2128131700}
-  - component: {fileID: 2128131702}
-  - component: {fileID: 2128131701}
-  m_Layer: 0
-  m_Name: ChestOpener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2128131700
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128131699}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.63, y: 0.07, z: -0.03707}
-  m_LocalScale: {x: 0.88586, y: 0.88586, z: 0.88586}
-  m_Children:
-  - {fileID: 31441635}
-  - {fileID: 2109857974}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2128131701
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128131699}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.026984215, y: -0.17809817}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.4355793, y: 1.9390631}
-  m_EdgeRadius: 0
---- !u!114 &2128131702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2128131699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576bb50061c6bd44aa6d11de8ff67bfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChestClosed: {fileID: 31441633}
-  ChestOpened: {fileID: 2109857972}
-  Bomb: {fileID: 2371405073881425651, guid: ac685dce058af5a4db55b0e16383b1d4, type: 3}
-  Weapon: {fileID: 6714035239212892842, guid: 908a0340d1f1bf34ca064b6aa3223272, type: 3}
