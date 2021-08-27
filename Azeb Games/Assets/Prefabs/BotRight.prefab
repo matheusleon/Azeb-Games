@@ -257,7 +257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  healthBar: {fileID: 0}
   triggersGameOver: 0
+  isBot: 1
   team: 0
   animator: {fileID: 1641454425328070748}
   dyingTime: 1.3
