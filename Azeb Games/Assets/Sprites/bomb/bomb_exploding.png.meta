@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 6bb9e1468e1d8a14083fb9cf6e29d5de
+guid: 1f1e0497880fe4a4d8e6abb1b8d53376
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1683342789153108896
-    second: bomb_floating_0
+      213: -27253191246142886
+    second: bomb_exploding_0
   - first:
-      213: -8451036284971994248
-    second: bomb_floating_1
+      213: -5982253540793010770
+    second: bomb_exploding_1
   - first:
-      213: -82243521281453051
-    second: bomb_floating_2
+      213: 6456584284456451604
+    second: bomb_exploding_2
   - first:
-      213: 6995453588782533104
-    second: bomb_floating_3
+      213: 2382682377208047289
+    second: bomb_exploding_3
+  - first:
+      213: -8558032019973024196
+    second: bomb_exploding_4
+  - first:
+      213: 8455907380339638636
+    second: bomb_exploding_6
+  - first:
+      213: 4123062021168558806
+    second: bomb_exploding_7
+  - first:
+      213: 7658138038377806082
+    second: bomb_exploding_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,17 +111,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bomb_floating_0
+      name: bomb_exploding_0
       rect:
         serializedVersion: 2
         x: 6
-        y: 40
+        y: 70
         width: 19
-        height: 24
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,18 +141,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3bfa6195f6c5710800000000000000
-      internalID: 1683342789153108896
+      spriteID: a5227c0fd5d2f9ff0800000000000000
+      internalID: -27253191246142886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bomb_floating_1
+      name: bomb_exploding_1
       rect:
         serializedVersion: 2
         x: 38
-        y: 36
+        y: 70
         width: 19
         height: 24
       alignment: 0
@@ -138,19 +162,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 873be4a3643e7ba80800000000000000
-      internalID: -8451036284971994248
+      spriteID: ea5b5b89914cafca0800000000000000
+      internalID: -5982253540793010770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bomb_floating_2
+      name: bomb_exploding_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 70
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e7561c2356a9950800000000000000
+      internalID: 6456584284456451604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_exploding_3
       rect:
         serializedVersion: 2
         x: 6
-        y: 8
-        width: 19
+        y: 38
+        width: 25
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -159,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50411f004ffcbdef0800000000000000
-      internalID: -82243521281453051
+      spriteID: 9b6a1128ffcf01120800000000000000
+      internalID: 2382682377208047289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bomb_floating_3
+      name: bomb_exploding_4
       rect:
         serializedVersion: 2
-        x: 38
-        y: 5
-        width: 19
-        height: 24
+        x: 34
+        y: 32
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +225,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f94d1ab9f7d41160800000000000000
-      internalID: 6995453588782533104
+      spriteID: c36d6116833cb3980800000000000000
+      internalID: -8558032019973024196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_exploding_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c618fba06fa695570800000000000000
+      internalID: 8455907380339638636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_exploding_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2f7a6301f083930800000000000000
+      internalID: 4123062021168558806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bomb_exploding_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2097a6aa8fb274a60800000000000000
+      internalID: 7658138038377806082
       vertices: []
       indices: 
       edges: []

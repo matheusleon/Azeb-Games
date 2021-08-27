@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3230145056917259216}
   - component: {fileID: 326706244194215738}
   - component: {fileID: -2480067526157437807}
+  - component: {fileID: 2342592031707254015}
   m_Layer: 0
   m_Name: WandChest
   m_TagString: Collectable
@@ -130,3 +131,22 @@ MonoBehaviour:
   MoveVector: {x: 0, y: 1, z: 0}
   MoveRange: 2
   MoveSpeed: 0.5
+--- !u!95 &2342592031707254015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714035239212892842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a82064a8d6d3c024295cb3e5ff8fa0f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

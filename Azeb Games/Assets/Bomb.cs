@@ -5,37 +5,47 @@ using System;
 
 public class Bomb : MonoBehaviour
 {
-	public float speed = 15f;
+    public Animator animator;
+
+    public float speed = 15f;
     public float timeToExplode;
     public int damage = 20;
     public Rigidbody2D rb;
     public LayerMask whatIsEnemy;
     public Transform explosionPos;
 	public float explosionRange;
+    private bool exploding = false;
+    private float currentTime;
 
     void Start()
     {
+        currentTime = timeToExplode;
     	float oneDirectionVelocity = (float) Math.Sqrt(1.0 / 2.0);
         rb.velocity = new Vector2(oneDirectionVelocity * transform.right.x, oneDirectionVelocity) * speed;
     }
 
     void Update()
     {
-        if (timeToExplode <= 0) {
-        	Explode(whatIsEnemy);
-    	} else {
-        	timeToExplode -= Time.deltaTime;
+        animator.SetFloat("BombIntegrity", currentTime / timeToExplode);
+        if (currentTime <= 0) {
+            if (!exploding) {
+                exploding = true;
+        	    Explode(whatIsEnemy);
+            }
+        } else {
+            currentTime -= Time.deltaTime;
     	}
     }
 
     void Explode(LayerMask attackLayer) {
-		Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(explosionPos.position, explosionRange, attackLayer);
+        gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(explosionPos.position, explosionRange, attackLayer);
 		Debug.Log("Inimigos encontrados pela bomba: " + enemiesToDamage.Length);
 		if (enemiesToDamage.Length > 0) {
 			DoDamage(enemiesToDamage);
 		}
-		// TODO: explosion animation
-		Destroy(gameObject);
+        float explodingTime = 0.4f;
+        Destroy(gameObject, explodingTime / 2.0f);
 	}
 
     void DoDamage(Collider2D[] enemiesToDamage) {

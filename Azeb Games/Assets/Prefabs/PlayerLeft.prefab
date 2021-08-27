@@ -359,6 +359,7 @@ MonoBehaviour:
   triggersGameOver: 0
   team: 0
   animator: {fileID: 7468000630988837991}
+  dyingTime: 0.75
   animateDeath: 1
 --- !u!114 &1938263022740561860
 MonoBehaviour:
@@ -377,6 +378,7 @@ MonoBehaviour:
   runSpeed: 60
   id: -10
   bombCount: 0
+  hasWeapon: 0
 --- !u!114 &1631648565465674768
 MonoBehaviour:
   m_ObjectHideFlags: 0

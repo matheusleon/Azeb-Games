@@ -230,6 +230,7 @@ MonoBehaviour:
   triggersGameOver: 0
   team: 0
   animator: {fileID: 2932637523315804703}
+  dyingTime: 1.3
   animateDeath: 1
 --- !u!114 &8704874320867166741
 MonoBehaviour:

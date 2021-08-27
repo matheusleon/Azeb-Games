@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4322191670790488420}
   - component: {fileID: 3580720847794926894}
   - component: {fileID: -2705879029588022076}
+  - component: {fileID: 1031056122990095904}
   m_Layer: 0
   m_Name: BombChest
   m_TagString: Collectable
@@ -113,7 +114,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 1
 --- !u!114 &-2705879029588022076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +131,22 @@ MonoBehaviour:
   MoveVector: {x: 0, y: 1, z: 0}
   MoveRange: 2
   MoveSpeed: 0.5
+--- !u!95 &1031056122990095904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371405073881425651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3286cf42afcca7e4a9a14cdff0b4f2ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

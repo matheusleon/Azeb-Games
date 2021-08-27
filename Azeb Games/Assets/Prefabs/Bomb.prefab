@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6115027671917261697}
   - component: {fileID: 3133217215386738029}
   - component: {fileID: 4946716080180192510}
+  - component: {fileID: 3560653751347232858}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f569f2cef4a0c49b9fe42c84db71a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3560653751347232858}
   speed: 15
   timeToExplode: 2
   damage: 1000
@@ -174,3 +176,22 @@ MonoBehaviour:
     m_Bits: 0
   explosionPos: {fileID: 289337692754708211}
   explosionRange: 3.5
+--- !u!95 &3560653751347232858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3182091950773369640}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a614f7e609b73984aa99a8a80517421f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

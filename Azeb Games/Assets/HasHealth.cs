@@ -11,6 +11,7 @@ public class HasHealth : MonoBehaviour
 
     public Animator animator;
     private bool died = false;
+    public float dyingTime;
     public bool animateDeath;
 
     public enum Team {
@@ -35,7 +36,6 @@ public class HasHealth : MonoBehaviour
     	
         Debug.Log("damage taken, current health is " + health.ToString());
 
-        float dyingTime = 0;
         if (health <= 0 && !died)
         {
             if (animateDeath) {
@@ -45,7 +45,6 @@ public class HasHealth : MonoBehaviour
                 if (HasParameter("Dying", animator))
                 {
                     animator.SetTrigger("Dying");
-                    dyingTime = 1.5f;
                 }
                 Debug.Log("Game object died");
             }
