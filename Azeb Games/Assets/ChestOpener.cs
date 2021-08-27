@@ -29,11 +29,17 @@ public class ChestOpener : MonoBehaviour
             Instantiate(Weapon, transform.position + new Vector3(0, 0 + 6, 0), Quaternion.identity);
         }
 
+        Destroy(gameObject);
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         ChestClosed.SetActive(true);
         ChestOpened.SetActive(false);
+    }
+
+    void OnDestroy() {
+        ChestSpawnerController chestController = Object.FindObjectOfType<ChestSpawnerController>();
+        chestController.chestCount -= 1;
     }
 }
