@@ -64,10 +64,10 @@ public class HasHealth : MonoBehaviour
         if (triggersGameOver) {
             string sceneName = null;
             if (this.team == Team.Blue)
-                sceneName = "GameOverRedWins";            
+                sceneName = "GameOverBlueWins";            
             if (this.team == Team.Red)
-                sceneName = "GameOverBlueWins";
-            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+                sceneName = "GameOverRedWins";
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

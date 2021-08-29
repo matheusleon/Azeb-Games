@@ -9,12 +9,10 @@ public class NavigationScript : MonoBehaviour
 {
     GameObject mainMenu;
     GameObject optionsMenu;
-    GameObject lobbyMenu;
 
-    string[] mainMenuOptions = new string[3] {
+    string[] mainMenuOptions = new string[2] {
         "Play2Button",
-        "OptionsButton",
-        "ExitButton",
+        "HowToPlayButton",
     };
 
     GameObject[] mainMenuSelectors;
@@ -25,12 +23,11 @@ public class NavigationScript : MonoBehaviour
     void Start()
     {
         // Initialize menu selectors (visual navigation)
-        this.mainMenuSelectors = new GameObject[3] {
+        this.mainMenuSelectors = new GameObject[2] {
             GameObject.Find("PlaySelector"),
-            GameObject.Find("OptionsSelector"),
-            GameObject.Find("ExitSelector"),
+            GameObject.Find("HowToPlaySelector"),
         };
-        for (int i = 1; i < 3; i++) {
+        for (int i = 1; i < 2; i++) {
             if (this.mainMenuSelectors[i] != null) {
                 this.mainMenuSelectors[i].SetActive(false);
             }
@@ -38,14 +35,14 @@ public class NavigationScript : MonoBehaviour
 
         // Initialize menu references
         mainMenu = GameObject.Find("MainMenu");
-        optionsMenu = GameObject.Find("OptionsMenu");
-        lobbyMenu = GameObject.Find("Lobby");
+        optionsMenu = GameObject.Find("HowToPlayMenu");
         if (optionsMenu != null) {
             optionsMenu.SetActive(false);
         }
-        if (lobbyMenu != null) {
-            lobbyMenu.SetActive(false);
-        }
+    }
+
+    void Awake()
+    {
         AirConsole.instance.onMessage += this.onMessage;
     }
 
@@ -94,7 +91,7 @@ public class NavigationScript : MonoBehaviour
             } else if (key == "down") {
                 this.updateMainMenu(1);
             }
-        } else if (element.ToString() == "jump") {
+        } else if (element == "attackButton") {
             var pressed = (int) parsedData["pressed"];
             if (pressed == 0) {
                 return;
@@ -104,28 +101,15 @@ public class NavigationScript : MonoBehaviour
     }
 
     void optionsMenuHandler(int device_id, JToken data) {
-        Debug.Log("Options menu");
+        Debug.Log("OIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         string element = data.Value<string>("element");
         JObject parsedData = data.Value<JObject>("data");
-        if (element.ToString() == "jump") {
+        if (element.ToString() == "attackButton") {
             var pressed = (int) parsedData["pressed"];
             if (pressed == 0) {
                 return;
             }
-            this.onButtonClick("OptionsBackButton");
-        }
-    }
-
-    void lobbyMenuHandler(int device_id, JToken data) {
-        Debug.Log("Lobby menu");
-        string element = data.Value<string>("element");
-        JObject parsedData = data.Value<JObject>("data");
-        if (element.ToString() == "jump") {
-            var pressed = (int) parsedData["pressed"];
-            if (pressed == 0) {
-                return;
-            }
-            this.onButtonClick("LobbyExitButton");
+            this.onButtonClick("HowToPlayBackButton");
         }
     }
 
@@ -138,17 +122,16 @@ public class NavigationScript : MonoBehaviour
             mainMenuHandler(device_id, data);
         } else if (this.optionsMenu != null && this.optionsMenu.activeInHierarchy) {
             optionsMenuHandler(device_id, data);
-        } else if (this.lobbyMenu != null && this.lobbyMenu.activeInHierarchy) {
-            lobbyMenuHandler(device_id, data);
         } else {
-
+            Debug.Log("nao achei menu que preste");
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void onDisable()
     {
-        
+        if (AirConsole.instance != null) {
+            AirConsole.instance.onMessage -= this.onMessage;
+        }
     }
 
     void onDestroy()

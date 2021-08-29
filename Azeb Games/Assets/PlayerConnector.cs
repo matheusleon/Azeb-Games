@@ -5,14 +5,30 @@ using NDream.AirConsole;
 
 public class PlayerConnector : MonoBehaviour
 {
-    public int id_left = -10;
-    public int id_right = -10;
+    public int id_left = LobbyPlayerConnector.PLAYER_LEFT_ID;
+    public int id_right = LobbyPlayerConnector.PLAYER_RIGHT_ID;
 
     void Start()
     {
-        AirConsole.instance.onConnect += onConnect;
+        // AirConsole.instance.onConnect += onConnect;
+        GameObject player_left = GameObject.Find("PlayerSpawnerLeft");
+        if (player_left != null)
+        {
+            player_left.GetComponent<PlayerSpawner>().id = LobbyPlayerConnector.PLAYER_LEFT_ID;
+        }
+        
+        GameObject player_right = GameObject.Find("PlayerSpawnerRight");
+        if (player_right != null)
+        {
+            player_right.GetComponent<PlayerSpawner>().id = LobbyPlayerConnector.PLAYER_RIGHT_ID;
+        }
+
+        Debug.Log("CARREGUEI!");
+        Debug.Log(LobbyPlayerConnector.PLAYER_LEFT_ID);
+        Debug.Log(LobbyPlayerConnector.PLAYER_RIGHT_ID);
     }
 
+    /*
     void onConnect(int deviceId)
     {
         Debug.Log("Connecting device " + deviceId.ToString());
@@ -35,4 +51,5 @@ public class PlayerConnector : MonoBehaviour
             }
         }
     }
+    */
 }
