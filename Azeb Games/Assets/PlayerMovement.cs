@@ -130,8 +130,9 @@ public class PlayerMovement : MonoBehaviour
             } 
             else if (item == "Weapon")
             {
-                BombThrower bombThrower = GetComponent<BombThrower>();
-                bombThrower.addBomb();
+                transform.Find("Wand").gameObject.SetActive(true);
+                Weapon weapon = GetComponent<Weapon>();
+                weapon.updateWeapon();
                 gameObject.GetComponent<MeleeAttack>().enabled = false;
                 gameObject.GetComponent<Weapon>().enabled = true;
             }

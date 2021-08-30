@@ -16,10 +16,15 @@ public class WandMovement : MonoBehaviour
     {
         wandMovement = this;
         startPosition = wandMovement.transform.parent.position;
+        gameObject.SetActive(false);
     }
     void Update()
     {
-        if (Move)
+        Weapon weapon = GetComponentInParent<Weapon>();
+
+        Debug.Log("weapon - hasWand = " + weapon.hasWand());
+
+        if (Move && weapon.hasWand())
         {
             Vector3 handPosition = wandMovement.transform.parent.position;
             handPosition.y -= 0.4f;

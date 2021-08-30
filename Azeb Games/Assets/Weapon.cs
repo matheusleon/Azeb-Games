@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public LayerMask whatIsEnemy;
     public int id;
     private int isShooting;
+    private bool hasWeapon = false;
 
     void Start()
     {
@@ -42,7 +43,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isShooting == 1 && timeLeftToAttack <= 0)
+        if (isShooting == 1 && timeLeftToAttack <= 0 && hasWeapon == true)
         {
             Shoot();
             isShooting = 0;
@@ -56,5 +57,15 @@ public class Weapon : MonoBehaviour
     {
         var bullet_instance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet_instance.GetComponent<Bullet>().whatIsEnemy = this.whatIsEnemy;
+    }
+
+    public void updateWeapon()
+    {
+        hasWeapon = true;
+    }
+
+    public bool hasWand()
+    {
+        return hasWeapon;
     }
 }

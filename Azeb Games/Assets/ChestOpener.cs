@@ -20,7 +20,7 @@ public class ChestOpener : MonoBehaviour
         ChestOpened.SetActive(true);
 
         double item = Random.Range(0.0f, 1.0f);
-        if (item <= 0.7)
+        if (item <= 0.6)
         {
             Instantiate(Bomb, transform.position + new Vector3(0, 0 + 6, 0), Quaternion.identity);
         } 
