@@ -64,4 +64,9 @@ public class BombThrower : MonoBehaviour
         bombCount++;
         Debug.Log("bombCount = " + bombCount);
     }
+
+    public int getBombCount()
+    {
+        return bombCount;
+    }
 }
