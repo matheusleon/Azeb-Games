@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
+using UnityEngine.SceneManagement;
 
 public class Weapon : MonoBehaviour
 {
@@ -56,5 +57,10 @@ public class Weapon : MonoBehaviour
     {
         var bullet_instance = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet_instance.GetComponent<Bullet>().whatIsEnemy = this.whatIsEnemy;
+    }
+
+    void OnDestroy()
+    {
+        AirConsole.instance.onMessage -= onMessage;
     }
 }

@@ -64,4 +64,11 @@ public class BombThrower : MonoBehaviour
         bombCount++;
         Debug.Log("bombCount = " + bombCount);
     }
+
+    void OnDestroy()
+    {
+        if (AirConsole.instance != null) {
+            AirConsole.instance.onMessage -= this.onMessage;
+        }
+    }
 }

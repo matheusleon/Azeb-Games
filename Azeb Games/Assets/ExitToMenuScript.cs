@@ -11,7 +11,32 @@ public class ExitToMenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AirConsole.instance.onMessage += this.onMessage;
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += this.OnSceneLoaded;
+        SceneManager.sceneUnloaded += this.OnSceneUnloaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameOverBlueWins" || scene.name == "GameOverRedWins") {
+            AirConsole.instance.onMessage += this.onMessage;
+        }
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        if (scene.name == "GameOverBlueWins" || scene.name == "GameOverRedWins") {
+            AirConsole.instance.onMessage -= this.onMessage;
+        }
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= this.OnSceneLoaded;
+        SceneManager.sceneUnloaded -= this.OnSceneUnloaded;
     }
 
     void onMessage(int device_id, JToken data)
@@ -24,14 +49,10 @@ public class ExitToMenuScript : MonoBehaviour
             if (pressed == 0) {
                 return;
             }
+            if (AirConsole.instance != null) {
+                AirConsole.instance.onMessage -= this.onMessage;
+            }
             SceneManager.LoadScene(0);
-        }
-    }
-
-    void onDisable()
-    {
-        if (AirConsole.instance != null) {
-            AirConsole.instance.onMessage -= this.onMessage;
         }
     }
 }
