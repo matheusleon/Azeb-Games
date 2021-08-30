@@ -4,6 +4,7 @@ using UnityEngine;
 using NDream.AirConsole;
 using Newtonsoft.Json.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NavigationScript : MonoBehaviour
 {
@@ -41,9 +42,30 @@ public class NavigationScript : MonoBehaviour
         }
     }
 
-    void Awake()
+    void OnEnable()
     {
-        AirConsole.instance.onMessage += this.onMessage;
+        SceneManager.sceneLoaded += this.OnSceneLoaded;
+        SceneManager.sceneUnloaded += this.OnSceneUnloaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenu") {
+            AirConsole.instance.onMessage += this.onMessage;
+        }
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        if (scene.name == "MainMenu") {
+            AirConsole.instance.onMessage -= this.onMessage;
+        }
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= this.OnSceneLoaded;
+        SceneManager.sceneUnloaded -= this.OnSceneUnloaded;
     }
 
     void onButtonClick(string buttonSelector)
@@ -101,7 +123,6 @@ public class NavigationScript : MonoBehaviour
     }
 
     void optionsMenuHandler(int device_id, JToken data) {
-        Debug.Log("OIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         string element = data.Value<string>("element");
         JObject parsedData = data.Value<JObject>("data");
         if (element.ToString() == "attackButton") {
@@ -124,20 +145,6 @@ public class NavigationScript : MonoBehaviour
             optionsMenuHandler(device_id, data);
         } else {
             Debug.Log("nao achei menu que preste");
-        }
-    }
-
-    void onDisable()
-    {
-        if (AirConsole.instance != null) {
-            AirConsole.instance.onMessage -= this.onMessage;
-        }
-    }
-
-    void onDestroy()
-    {
-        if (AirConsole.instance != null) {
-            AirConsole.instance.onMessage -= this.onMessage;
         }
     }
 }

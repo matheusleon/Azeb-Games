@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
     }
 
-    void onDestroy()
+    void OnDestroy()
     {
         if (AirConsole.instance != null){
             AirConsole.instance.onMessage -= onMessage;

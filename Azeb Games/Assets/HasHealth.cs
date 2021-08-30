@@ -67,6 +67,13 @@ public class HasHealth : MonoBehaviour
                 sceneName = "GameOverBlueWins";            
             if (this.team == Team.Red)
                 sceneName = "GameOverRedWins";
+
+            foreach (GameObject o in Object.FindObjectsOfType<GameObject>()) {
+                if (o.name != "AirConsole") {
+                    Destroy(o);
+                }
+            }
+
             SceneManager.LoadScene(sceneName);
         }
     }

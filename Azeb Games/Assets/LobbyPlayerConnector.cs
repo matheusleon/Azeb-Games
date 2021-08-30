@@ -16,7 +16,6 @@ public class LobbyPlayerConnector : MonoBehaviour
 
     void Start()
     {
-        AirConsole.instance.onMessage += this.onMessage;
         DontDestroyOnLoad(this.gameObject);
         
         GameObject playerLeftImg = GameObject.Find("Player1JoinButton");
@@ -27,15 +26,38 @@ public class LobbyPlayerConnector : MonoBehaviour
         if (playerRightImg != null) {
             LobbyPlayerConnector.PLAYER_RIGHT_IMAGE = playerRightImg.GetComponent<Image>();
         }
-
-        LobbyPlayerConnector.LOBBY_ACTIVE = true;
     }
 
-    void Awake()
+    void OnEnable()
     {
-        LobbyPlayerConnector.PLAYER_LEFT_ID = -1;
-        LobbyPlayerConnector.PLAYER_RIGHT_ID = -1;
-        LobbyPlayerConnector.LOBBY_ACTIVE = true;
+        SceneManager.sceneLoaded += this.OnSceneLoaded;
+        SceneManager.sceneUnloaded += this.OnSceneUnloaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Lobby") {
+            AirConsole.instance.onMessage += this.onMessage;
+            LobbyPlayerConnector.PLAYER_LEFT_ID = -1;
+            LobbyPlayerConnector.PLAYER_RIGHT_ID = -1;
+            LobbyPlayerConnector.LOBBY_ACTIVE = true;
+        }
+    }
+
+    void OnSceneUnloaded(Scene scene)
+    {
+        if (scene.name == "Lobby") {
+            if (AirConsole.instance != null) {
+                AirConsole.instance.onMessage -= this.onMessage;
+            }
+            LobbyPlayerConnector.LOBBY_ACTIVE = false;
+        }
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= this.OnSceneLoaded;
+        SceneManager.sceneUnloaded -= this.OnSceneUnloaded;
     }
 
     public static void updateButtonColor(Image image, Color color) {
@@ -108,21 +130,6 @@ public class LobbyPlayerConnector : MonoBehaviour
         } else if (element.ToString() == "special") {
             // Go back to main menu
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        }
-    }
-
-    void onDisable()
-    {
-        if (AirConsole.instance != null) {
-            Debug.Log("tirei o onMessage do lobby");
-            AirConsole.instance.onMessage -= this.onMessage;
-        }
-    }
-
-    void onDestroy()
-    {
-        if (AirConsole.instance != null) {
-            AirConsole.instance.onMessage -= this.onMessage;
         }
     }
 }
