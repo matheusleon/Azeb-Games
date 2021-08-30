@@ -33,6 +33,8 @@ public class LobbyPlayerConnector : MonoBehaviour
 
     void Awake()
     {
+        LobbyPlayerConnector.PLAYER_LEFT_ID = -1;
+        LobbyPlayerConnector.PLAYER_RIGHT_ID = -1;
         LobbyPlayerConnector.LOBBY_ACTIVE = true;
     }
 
