@@ -169,7 +169,7 @@ MonoBehaviour:
   animator: {fileID: 3560653751347232858}
   speed: 15
   timeToExplode: 2
-  damage: 1000
+  damage: 250
   rb: {fileID: 6115027671917261697}
   whatIsEnemy:
     serializedVersion: 2

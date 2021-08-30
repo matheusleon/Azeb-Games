@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e069c9599b792b44b8451206ba98a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 0.1
+  attackDelay: 0.5
   alwaysAttacking: 0
   attackPos: {fileID: 3705607673524006523}
   whatIsEnemy:
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackRange: 0.93
-  damage: 25
+  damage: 5
   isAttacking: 0
   id: 0
   animator: {fileID: 5715207039446972071}
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5d8e3570d42144aa5cdefa31635467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 2
+  attackDelay: 1
   firePoint: {fileID: 162581602404025054}
   bulletPrefab: {fileID: 7182791972099771083, guid: 6edb384df3a707a41bb3563c3815e0f7, type: 3}
   whatIsEnemy:

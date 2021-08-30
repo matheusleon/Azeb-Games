@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 10
+  damage: 40
   rb: {fileID: 1174376762775159119}
   whatIsEnemy:
     serializedVersion: 2

@@ -117,7 +117,7 @@ public class LobbyPlayerConnector : MonoBehaviour
         string element = data.Value<string>("element");
         JObject parsedData = data.Value<JObject>("data");
 
-        if (element.ToString() == "attackButton") {
+        if ((element != null) && element.ToString() == "attackButton") {
             var pressed = (int) parsedData["pressed"];
             if (pressed == 0) {
                 return;

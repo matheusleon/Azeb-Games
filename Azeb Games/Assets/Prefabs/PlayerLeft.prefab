@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e069c9599b792b44b8451206ba98a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 0.1
+  attackDelay: 0.5
   alwaysAttacking: 0
   attackPos: {fileID: 4156039507436808223}
   whatIsEnemy:
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackRange: 0.93
-  damage: 25
+  damage: 5
   isAttacking: 0
   id: 0
   animator: {fileID: 7468000630988837991}
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88aa73ff4f819b448a9180a35261688c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 2
+  attackDelay: 1
   bombPoint: {fileID: 6787252352416445316}
   bombPrefab: {fileID: 3182091950773369640, guid: a4e7cc0574f5eb34f912b9c220ba5607, type: 3}
   whatIsEnemy:

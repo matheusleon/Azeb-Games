@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b7265fe58f64001a1aefb15b6127a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTimeInSeconds: 10
+  spawnTimeInSeconds: 7
   chest: {fileID: 1998825678943752227, guid: 437643297f05c4d4eb8846ef6c45f102, type: 3}
 --- !u!1 &611868009
 GameObject:
@@ -6839,7 +6839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b079449dd7a314cb61163fe768ca2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3848423255306181672, guid: 9db573a1a29bf8c4e8498502f4956f49, type: 3}
+  player: {fileID: 8646243397766074385, guid: 9db573a1a29bf8c4e8498502f4956f49, type: 3}
   spawnDelay: 2
   id: -10
 --- !u!4 &1263622091

@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c8cad1c1f9d48cca94087e38c4adde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 50
   healthBar: {fileID: 0}
   triggersGameOver: 0
   isBot: 1
