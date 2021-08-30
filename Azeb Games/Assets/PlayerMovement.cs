@@ -123,13 +123,15 @@ public class PlayerMovement : MonoBehaviour
             string item = collision.gameObject.GetComponent<CollectableScript>().itemType;
             if (item == "Bomb")
             {
-                Debug.Log("Pegou");
+                // Debug.Log("Pegou");
                 bombCount = bombCount + 1;
                 BombThrower bombThrower = GetComponent<BombThrower>();
                 bombThrower.addBomb();
             } 
             else if (item == "Weapon")
-            {           
+            {
+                BombThrower bombThrower = GetComponent<BombThrower>();
+                bombThrower.addBomb();
                 gameObject.GetComponent<MeleeAttack>().enabled = false;
                 gameObject.GetComponent<Weapon>().enabled = true;
             }
