@@ -14,14 +14,25 @@
 }
 
 .button-150-300 {
-    background-image: url('button-150-300.png');
+    background-image: url('attack-button.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
 .button-150-300.button-active {
-    background-image: url('button-150-300-active.png');
+    background-image: url('attack-button-pressed.png');
+}
+
+.button-150-300-2 {
+    background-image: url('bomb-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.button-150-300-2.button-active {
+    background-image: url('bomb-button-pressed.png');
 }
 
 .button-150-300.button-active .button-text {
