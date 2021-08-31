@@ -37,9 +37,4 @@ public class ChestOpener : MonoBehaviour
         ChestClosed.SetActive(true);
         ChestOpened.SetActive(false);
     }
-
-    void OnDestroy() {
-        ChestSpawnerController.chestCount -= 1;
-        Debug.Log("Chest count is : " + ChestSpawnerController.chestCount.ToString());
-    }
 }

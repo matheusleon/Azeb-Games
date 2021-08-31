@@ -5,15 +5,14 @@ using System;
 
 public class ChestSpawnerController : MonoBehaviour
 {
-    private DateTime lastChestSpawned = DateTime.Now;
-    public static int chestCount = 0;
-    public int spawnTimeInSeconds = 30;
     public GameObject chest;
+    public double spawnDelay;
+    private double timeLeftToSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeLeftToSpawn = spawnDelay;
     }
 
     // Update is called once per frame
@@ -21,10 +20,15 @@ public class ChestSpawnerController : MonoBehaviour
     {
         var now = DateTime.Now;
 
-        if ((now - lastChestSpawned).TotalSeconds > spawnTimeInSeconds && chestCount == 0) {
-            Instantiate(chest, chest.transform.position, chest.transform.rotation);
-            lastChestSpawned = now;
-            chestCount++;
-        }
+		if (GameObject.Find("ChestOpener(Clone)") == null) {
+			if (timeLeftToSpawn <= 0) {
+				Instantiate(chest, chest.transform.position, chest.transform.rotation);
+                timeLeftToSpawn = spawnDelay;
+			} else {
+				timeLeftToSpawn -= Time.deltaTime;
+			}
+		} else {
+			timeLeftToSpawn = spawnDelay;
+		}
     }
 }
